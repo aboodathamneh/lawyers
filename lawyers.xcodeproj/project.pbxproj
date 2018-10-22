@@ -3,19 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		744B1D5BC42B993E4D7AE234 /* Pods_lawyers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D311D19CB3093BF28D25B38 /* Pods_lawyers.framework */; };
 		8E048B8F217C785A00BB5EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E048B8E217C785A00BB5EBB /* AppDelegate.swift */; };
 		8E048B91217C785B00BB5EBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E048B90217C785B00BB5EBB /* ViewController.swift */; };
 		8E048B94217C785B00BB5EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E048B92217C785B00BB5EBB /* Main.storyboard */; };
 		8E048B97217C785B00BB5EBB /* lawyers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E048B95217C785B00BB5EBB /* lawyers.xcdatamodeld */; };
 		8E048B99217C786B00BB5EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E048B98217C786B00BB5EBB /* Assets.xcassets */; };
 		8E048B9C217C786B00BB5EBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E048B9A217C786B00BB5EBB /* LaunchScreen.storyboard */; };
+		8E048BA4217C833000BB5EBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E048BA3217C833000BB5EBB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D311D19CB3093BF28D25B38 /* Pods_lawyers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lawyers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F416021533152B21BB61436 /* Pods-lawyers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.release.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.release.xcconfig"; sourceTree = "<group>"; };
 		8E048B8B217C785A00BB5EBB /* lawyers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lawyers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E048B8E217C785A00BB5EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E048B90217C785B00BB5EBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,9 @@
 		8E048B98217C786B00BB5EBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E048B9B217C786B00BB5EBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E048B9D217C786B00BB5EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E048BA3217C833000BB5EBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EC42B74217DD63D00C036AA /* lawyers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lawyers.entitlements; sourceTree = "<group>"; };
+		C2569D983D97A989ACE12911 /* Pods-lawyers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.debug.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744B1D5BC42B993E4D7AE234 /* Pods_lawyers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3595062DD741144BCF511D06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D311D19CB3093BF28D25B38 /* Pods_lawyers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E048B82217C785A00BB5EBB = {
 			isa = PBXGroup;
 			children = (
 				8E048B8D217C785A00BB5EBB /* lawyers */,
 				8E048B8C217C785A00BB5EBB /* Products */,
+				E8D99D2A7066ECD11D53E2FF /* Pods */,
+				3595062DD741144BCF511D06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +74,26 @@
 		8E048B8D217C785A00BB5EBB /* lawyers */ = {
 			isa = PBXGroup;
 			children = (
+				8EC42B74217DD63D00C036AA /* lawyers.entitlements */,
 				8E048B8E217C785A00BB5EBB /* AppDelegate.swift */,
 				8E048B90217C785B00BB5EBB /* ViewController.swift */,
 				8E048B92217C785B00BB5EBB /* Main.storyboard */,
 				8E048B98217C786B00BB5EBB /* Assets.xcassets */,
+				8E048BA3217C833000BB5EBB /* GoogleService-Info.plist */,
 				8E048B9A217C786B00BB5EBB /* LaunchScreen.storyboard */,
 				8E048B9D217C786B00BB5EBB /* Info.plist */,
 				8E048B95217C785B00BB5EBB /* lawyers.xcdatamodeld */,
 			);
 			path = lawyers;
+			sourceTree = "<group>";
+		};
+		E8D99D2A7066ECD11D53E2FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2569D983D97A989ACE12911 /* Pods-lawyers.debug.xcconfig */,
+				6F416021533152B21BB61436 /* Pods-lawyers.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E048BA0217C786B00BB5EBB /* Build configuration list for PBXNativeTarget "lawyers" */;
 			buildPhases = (
+				5E80DF801D0CE8839E754CCE /* [CP] Check Pods Manifest.lock */,
 				8E048B87217C785A00BB5EBB /* Sources */,
 				8E048B88217C785A00BB5EBB /* Frameworks */,
 				8E048B89217C785A00BB5EBB /* Resources */,
+				A411991FD29A9974338AE172 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,11 +130,16 @@
 				TargetAttributes = {
 					8E048B8A217C785A00BB5EBB = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = 8E048B86217C785A00BB5EBB /* Build configuration list for PBXProject "lawyers" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -125,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E048BA4217C833000BB5EBB /* GoogleService-Info.plist in Resources */,
 				8E048B9C217C786B00BB5EBB /* LaunchScreen.storyboard in Resources */,
 				8E048B99217C786B00BB5EBB /* Assets.xcassets in Resources */,
 				8E048B94217C785B00BB5EBB /* Main.storyboard in Resources */,
@@ -132,6 +169,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E80DF801D0CE8839E754CCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lawyers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A411991FD29A9974338AE172 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lawyers/Pods-lawyers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKMessengerShareKit/FBSDKMessengerShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKPlacesKit/FBSDKPlacesKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKMessengerShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKPlacesKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lawyers/Pods-lawyers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E048B87217C785A00BB5EBB /* Sources */ = {
@@ -284,11 +386,18 @@
 		};
 		8E048BA1217C786B00BB5EBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2569D983D97A989ACE12911 /* Pods-lawyers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = lawyers/lawyers.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKUJGKWRE7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-4-2",
+				);
 				INFOPLIST_FILE = lawyers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +411,18 @@
 		};
 		8E048BA2217C786B00BB5EBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F416021533152B21BB61436 /* Pods-lawyers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = lawyers/lawyers.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKUJGKWRE7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-4-2",
+				);
 				INFOPLIST_FILE = lawyers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
