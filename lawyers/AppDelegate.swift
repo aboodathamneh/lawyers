@@ -4,14 +4,15 @@
 //
 //  Created by Abood_ath on 10/21/18.
 //  Copyright © 2018 Abood_ath. All rights reserved.
-//
+//lat 
 
 import UIKit
 import CoreData
 import Firebase
 import FBSDKCoreKit
+import GoogleSignIn
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
 
     var window: UIWindow?
 
@@ -19,13 +20,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Override point for customization after application launch.
-     FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
+     // facebook
+        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self as? GIDSignInDelegate
         FirebaseApp.configure()
+        //for google
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance()?.delegate = self
+        //google end
+        
         return true
     }
+     //GIDsign in protocol google
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let err = error{
+            print("failed to log in with google:",err)
+            return
+        }
+        print("succesfule sign in",user)
+        //google auth
+        guard let idToken = user.authentication.idToken else {return}
+        guard let accessToken = user.authentication.accessToken else {return}
+        let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken )
+        Auth.auth().signInAndRetrieveData(with: credentials) { (user, error) in
+            if let err = error{
+                print("faild to connect to firebase",err)
+                return
+            }
+
+           // guard let uid = user?.uid else{return}
+            print("successfully logged in firebasse",user!)
+        }
+    }
+    
+    //protocol ends
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-   
+   //facebook log in
         let handled = FBSDKApplicationDelegate.sharedInstance()?.application(app , open: url, sourceApplication:options [UIApplication.OpenURLOptionsKey.sourceApplication] as?String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+      //facebook end
+        //google
+        GIDSignIn.sharedInstance().handle(url,
+        sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+        annotation:options[UIApplication.OpenURLOptionsKey.annotation])
+        //google end
         return handled!
     }
     func applicationWillResignActive(_ application: UIApplication) {

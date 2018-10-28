@@ -24,4 +24,7 @@ pod 'FBSDKPlacesKit'
 
 pod 'FBSDKMessengerShareKit'
 
+pod 'GoogleSignIn'
+
+pod 'Firebase/Firestore'
 end
