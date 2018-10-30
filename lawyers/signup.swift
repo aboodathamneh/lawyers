@@ -184,16 +184,17 @@ func Validation() -> Bool {
     return vaild
     
 }
-func SignUp() {
+// for signup using email and password
+    func SignUp() {
     if (Validation()==false)
     {
         self.loading.stopAnimating()
         self.loading.isHidden = true
-        ActionSheet(Msg:"Please Enter Email")
+        ActionSheet(Msg:"password or email are invalid")
         Clear()
         return
     }
-    if ((txtPassword.text==txtConfirmPassword.text)==false){
+    else if ((txtPassword.text==txtConfirmPassword.text)==false){
         self.loading.stopAnimating()
         self.loading.isHidden = true
          ActionSheet(Msg:"Password And Confirm Password must be equale")
